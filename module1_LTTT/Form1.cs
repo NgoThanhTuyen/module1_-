@@ -16,6 +16,10 @@ namespace module1_LTTT
         {
             InitializeComponent();
         }
+        private void textbox1_KeyPress(object sender, KeyPressEventArgs e)
+    {
+ e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+ }
 
     }
 }
